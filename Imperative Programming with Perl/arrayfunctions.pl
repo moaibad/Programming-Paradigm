@@ -18,6 +18,7 @@ print "The sorted array contains: @sortedarray\n";
 my @new_array = qw(cat dog rabbit turtle fox badger); # create a new array using qw
 print "@new_array\n\n";
 
+
 #Array sorting
 @array = qw( 99players b_squad a-team 1_Boy A-team B_squad 2_Boy);
 print "The array contains: @array\n";
@@ -30,3 +31,25 @@ print "The numerically descending sorted array contains: @sortedarray\n";
 
 @sortedarray = sort {lc $a cmp lc $b} @array; #sort array alphabetically ascending
 print "The alphabetically ascending sorted array contains: @sortedarray\n\n";
+
+
+#Accessing array
+my @words = qw( The quick brown fox jumps over the lazy dog and runs away );
+print "The array contains: @words\n";
+
+print "Making sentences with array:\n";
+
+my @makeWords = @words[0,1,3,4,5,6,8]; #first sentence
+print "- @makeWords\n";
+
+@makeWords = @words[0,2,3,10,11]; #second sentence
+print "- @makeWords\n";
+
+@makeWords = @words[0,7,8,10]; #third sentence
+print "- @makeWords\n";
+
+@makeWords = @words[0,8,10,11,3]; #fourth sentence
+print "- @makeWords\n";
+
+@makeWords = @words[0,1,2,8,10,5,6,7,3]; #fifth sentence
+print "- @makeWords\n";
