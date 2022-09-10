@@ -46,3 +46,25 @@ else{
 if(($salary=>100000) or ($bonus=>100000)){
     print "You are buying dinner tonight.\n";
 }
+
+
+#Pattern matching
+print "\n========PATTERN MATCHING========";
+print "\nEnter word : ";
+my $input = <>;
+
+if($input =~ /Chris/){
+    print "Found Chris!";
+}
+elsif($input =~ /Bells/){
+    print "Ding dong!";
+}
+elsif($input =~ /Wonder/){
+    print "I was wondering about that too";
+}
+elsif($input =~ /Land/){
+    print "Air and Sea";
+}
+else{
+    print "No word found";
+}
