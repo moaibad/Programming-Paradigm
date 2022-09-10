@@ -24,3 +24,22 @@ elsif ( $y > $x ){
 elsif ( $y == $x ){
     print "x is equal to y\n";
 }
+
+
+#Get input from user
+print "\n========AREA OF CIRCLE========\n";
+print "\nEnter the radius of the circle : ";
+my $input = <STDIN>;
+if($input > 0){
+    my $area = $input*$input*3.141592654;
+    print "The area of a circle is $area, ";
+    if($area > 100){
+        print "This is a big circle \n";
+    }
+    else{
+        print "this is a small circle \n";
+    }
+}
+else{
+    print "The radius of a circle must be a positive number";
+}
