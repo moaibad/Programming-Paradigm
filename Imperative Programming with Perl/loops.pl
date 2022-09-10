@@ -4,6 +4,8 @@ use strict;
 
 
 #Counting Year
+print "\nCount Year : \n";
+
 my $year = 1980;
 
 while($year <= 2010){
@@ -20,11 +22,13 @@ while($year <= 2010){
 #Backward loop
 my $number = 10;
 print "\nCountdown : \n";
+
 while($number>=0){
     print "$number\n";
 
     if($number == 0){
         print "We have lift off!";
     }
+    
     $number = $number-1;
 }
