@@ -17,3 +17,16 @@ print "The sorted array contains: @sortedarray\n";
 
 my @new_array = qw(cat dog rabbit turtle fox badger); # create a new array using qw
 print "@new_array\n\n";
+
+#Array sorting
+@array = qw( 99players b_squad a-team 1_Boy A-team B_squad 2_Boy);
+print "The array contains: @array\n";
+
+@sortedarray = sort{$a <=> $b} @array; #sort array numerically ascending
+print "The numerically ascending sorted array contains: @sortedarray\n";
+
+@sortedarray = sort{$b <=> $a} @array; #sort array numerically descending
+print "The numerically descending sorted array contains: @sortedarray\n";
+
+@sortedarray = sort {lc $a cmp lc $b} @array; #sort array alphabetically ascending
+print "The alphabetically ascending sorted array contains: @sortedarray\n\n";
