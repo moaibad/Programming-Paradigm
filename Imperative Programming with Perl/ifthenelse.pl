@@ -26,7 +26,7 @@ elsif ( $y == $x ){
 }
 
 
-#Get input from user
+#Area of circle
 print "\n========AREA OF CIRCLE========\n";
 print "\nEnter the radius of the circle : ";
 my $input = <STDIN>;
