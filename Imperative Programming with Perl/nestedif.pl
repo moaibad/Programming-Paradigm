@@ -66,5 +66,5 @@ elsif($input =~ /Land/){
     print "Air and Sea";
 }
 else{
-    print "No word found";
+    print "No word found!";
 }
