@@ -16,10 +16,12 @@ my @sortedarray = sort{$a <=> $b}(@array); # sort the array numerically
 print "The sorted array contains: @sortedarray\n";
 
 my @new_array = qw(cat dog rabbit turtle fox badger); # create a new array using qw
-print "@new_array\n\n";
+print "@new_array\n";
 
 
 #Array sorting
+print "\n========ARRAY SORTING========\n\n";
+
 @array = qw( 99players b_squad a-team 1_Boy A-team B_squad 2_Boy);
 print "The array contains: @array\n";
 
@@ -30,10 +32,12 @@ print "The numerically ascending sorted array contains: @sortedarray\n";
 print "The numerically descending sorted array contains: @sortedarray\n";
 
 @sortedarray = sort {lc $a cmp lc $b} @array; #sort array alphabetically ascending
-print "The alphabetically ascending sorted array contains: @sortedarray\n\n";
+print "The alphabetically ascending sorted array contains: @sortedarray\n";
 
 
 #Accessing array
+print "\n========ACCESSING ARRAY========\n\n";
+
 my @words = qw( The quick brown fox jumps over the lazy dog and runs away );
 print "The array contains: @words\n";
 
@@ -53,3 +57,27 @@ print "- @makeWords\n";
 
 @makeWords = @words[0,1,2,8,10,5,6,7,3]; #fifth sentence
 print "- @makeWords\n";
+
+
+#Multidimensional array
+print "\n========MULTIDIMENSIONAL ARRAY========\n\n";
+
+my @people = (["Clark", "Kent"], ["Lois", "Lane"], ["Bruce", "Wayne"]);
+
+push (@people[0],"Superman"); #add "Superman" to Clark Kent's sub-array
+
+pop @people; #remove Bruce Wayne's sub-array
+
+push (@people[1],"Reporter"); #add "Reporter" to Lois Lane's sub-array
+
+push (@people, ["Jimmy","Olsen","Photographer"]); #add third sub-array
+
+print "Matrix result :\n";
+for my $row (@people) { #print matrix
+    print join(" ", @{$row}), "\n";
+}
+
+print "\nShow only last name :\n";
+for my $row (@people) { #print only last name
+    print @$row[1], "\n";
+}
