@@ -15,3 +15,34 @@ if ( $x > 5.0 )
 if ( ( $x > 5.0 ) and ( $y > 5.0 ) ){
     print "x and y are greater than 5\n";
 }
+
+
+#Count salary and bonus
+print "\n========COUNT SALARY AND BONUS========";
+
+print "\nEnter salary : ";
+my $salary = <STDIN>;
+
+print "Enter bonus : ";
+my $bonus = <STDIN>;
+
+if($salary<100000){
+    if($bonus<100000){
+        print "\nYou are not a banker.\n";
+    }
+    else{
+        print "\nYou won the lottery.\n";
+    }
+}
+else{
+    if($bonus<100000){
+        print "\nYou are banker with no bonus\n";
+    }
+    else{
+        print "\nYou are a banker with a bonus\n";
+    }
+}
+
+if(($salary=>100000) or ($bonus=>100000)){
+    print "You are buying dinner tonight.\n";
+}
