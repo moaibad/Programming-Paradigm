@@ -64,11 +64,11 @@ print "\n========MULTIDIMENSIONAL ARRAY========\n\n";
 
 my @people = (["Clark", "Kent"], ["Lois", "Lane"], ["Bruce", "Wayne"]);
 
-push (@people[0],"Superman"); #add "Superman" to Clark Kent's sub-array
+push (@{$people[0]}, "Superman"); #add "Superman" to Clark Kent's sub-array
 
 pop @people; #remove Bruce Wayne's sub-array
 
-push (@people[1],"Reporter"); #add "Reporter" to Lois Lane's sub-array
+push (@{$people[1]}, "Reporter"); #add "Reporter" to Lois Lane's sub-array
 
 push (@people, ["Jimmy","Olsen","Photographer"]); #add third sub-array
 
