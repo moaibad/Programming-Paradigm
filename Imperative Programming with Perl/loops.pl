@@ -44,7 +44,6 @@ for(my $i=0; $i <= $#array; $i++){
         print "@array[$i]\n";
     }
     else{
-        my $uppercase = uc(@array[$i]);
-        print "$uppercase\n"; 
+        print uc(@array[$i]), "\n";
     }
 }
