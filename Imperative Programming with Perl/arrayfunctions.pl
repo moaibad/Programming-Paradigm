@@ -74,7 +74,7 @@ push (@people, ["Jimmy","Olsen","Photographer"]); #add third sub-array
 
 print "Matrix result :\n";
 for my $row (@people) { #print matrix
-    print join(" ", @{$row}), "\n";
+    print join(" ", @$row), "\n";
 }
 
 print "\nShow only last name :\n";
