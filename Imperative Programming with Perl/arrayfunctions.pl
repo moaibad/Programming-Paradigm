@@ -68,7 +68,7 @@ push (@{$people[0]}, "Superman"); #add "Superman" to Clark Kent's sub-array
 
 pop @people; #remove Bruce Wayne's sub-array
 
-push (@{$people[1]}, "Reporter"); #add "Reporter" to Lois Lane's sub-array
+$people[1][2] ="Reporter"; #add "Reporter" to Lois Lane's sub-array
 
 push (@people, ["Jimmy","Olsen","Photographer"]); #add third sub-array
 
