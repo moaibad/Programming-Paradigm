@@ -17,9 +17,9 @@ print "Does not match \n"
 if ($Para =~ m/^And/);
 # Matches 'And' at start of each line
 print "Matches (using modifiers) \n"
-
-
 if ($Para =~ m/^And/m);
+
+
 my $group = "abcd";
 # Grouping captures matched strings
 # 1 2 3 4
