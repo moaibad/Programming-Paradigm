@@ -1,5 +1,7 @@
 #!/usr/bin/perl -w
+
 use strict;
+
 my %chars;
 my $Para = 
 "Sunflowers waiting for sunshine. \n
