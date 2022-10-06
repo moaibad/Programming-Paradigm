@@ -13,6 +13,6 @@ checkPrime 1 =
 checkPrime x =
     comparePrime(x,x)
 
-primeList :: Integer -> [Integer]
-primeList x =
+listPrime :: Integer -> [Integer]
+listPrime x =
     [y | y <- [2 .. x], checkPrime y]
