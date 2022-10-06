@@ -7,6 +7,6 @@ checkEvenOddPosNeg (x) =
     else if x > 0 && x `mod` 2 == 1 then
         "Ganjil Positif"
     else if x < 0 && x `mod` 2 == 1 then
-        "Genap Negatif"
+        "Ganjil Negatif"
     else
         "Nol"
