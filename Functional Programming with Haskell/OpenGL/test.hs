@@ -1,23 +1,52 @@
 import Graphics.UI.GLUT
 import Graphics.Rendering.OpenGL
 
-main = do
-    (progName,_) <-getArgsAndInitialize
-    createAWindow progName
+renderInWindow displayFunction = do
+    (progName,_) <- getArgsAndInitialize
+    createWindow progName
+    displayCallback $= displayFunction
     mainLoop
 
-createAWindow windowName = do
-    createWindow windowName
-    displayCallback $= displayPoints
+muka = do
+    currentColor $= Color4 1 0.5 0 0
+    vertex $ Vertex3 (-0.4) (0.4) (0::GLfloat)
+    vertex $ Vertex3 (-0.4) (-0.1) (0::GLfloat)
+    vertex $ Vertex3 (-0.2) (-0.3) (0::GLfloat)
+    vertex $ Vertex3 (0.2) (-0.3) (0::GLfloat)
+    vertex $ Vertex3 (0.4) (-0.1) (0::GLfloat)
+    vertex $ Vertex3 (0.4) (0.1) (0::GLfloat)
+    vertex $ Vertex3 (0.4) (0.4) (0::GLfloat)
+    vertex $ Vertex3 (0.2) (0.3) (0::GLfloat)
+    vertex $ Vertex3 (-0.2) (0.3) (0::GLfloat)
 
-displayPoints = do
+mataKiri = do
+    currentColor $= Color4 0 0 0 0
+    vertex $ Vertex3 (-0.2) (0.2) (0::GLfloat)
+    vertex $ Vertex3 (-0.2) (0.1) (0::GLfloat)
+    vertex $ Vertex3 (-0.1) (0.1) (0::GLfloat)
+    vertex $ Vertex3 (-0.1) (0.2) (0::GLfloat)
+
+mataKanan = do
+    currentColor $= Color4 0 0 0 0
+    vertex $ Vertex3 (0.2) (0.2) (0::GLfloat)
+    vertex $ Vertex3 (0.2) (0.1) (0::GLfloat)
+    vertex $ Vertex3 (0.1) (0.1) (0::GLfloat)
+    vertex $ Vertex3 (0.1) (0.2) (0::GLfloat)
+
+mulut = do
+    currentColor $= Color4 1 0 0 0
+    vertex $ Vertex3 (-0.2) (-0.1) (0::GLfloat)
+    vertex $ Vertex3 (-0.1) (-0.2) (0::GLfloat)
+    vertex $ Vertex3 (0.1) (-0.2) (0::GLfloat)
+    vertex $ Vertex3 (0.2) (-0.1) (0::GLfloat)
+
+main = renderInWindow display
+
+display = do
+    clearColor $= Color4 1 1 1 1
     clear [ColorBuffer]
-    renderPrimitive Polygon
-        $mapM_ (\(x, y, z)->vertex$Vertex3 x y z) myPoints
-
-myPoints :: [(GLfloat,GLfloat,GLfloat)]
-myPoints =
-    [(-0.25, 0.25, 0.0)
-    ,(0.75, 0.35, 0.0)
-    ,(0.75, -0.15, 0.0)
-    ,((-0.75), -0.25, 0.0)]
+    renderPrimitive Polygon muka
+    renderPrimitive Polygon mataKiri
+    renderPrimitive Polygon mataKanan
+    renderPrimitive Polygon mulut
+    flush
