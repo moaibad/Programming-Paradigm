@@ -43,7 +43,7 @@ mulut = do
 main = renderInWindow display
 
 display = do
-    clearColor $= Color4 1 1 1 1
+    clearColor $= Color4 0 0 0 0
     clear [ColorBuffer]
     renderPrimitive Polygon muka
     renderPrimitive Polygon mataKiri
