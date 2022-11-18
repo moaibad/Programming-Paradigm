@@ -27,7 +27,34 @@ class PersegiPanjang < BangunDatar
 
 end
 
+
+class Lingkaran < BangunDatar
+    attr_accessor :r
+
+    def initialize(r)
+        self.r = r
+    end
+
+    def luas
+        puts (3.14*(r*r))
+    end
+
+    def keliling 
+        puts (2*3.14*r)
+    end
+
+end
+
+
 puts("=====Persegi Panjang=====")
 persegiPanjang = PersegiPanjang.new(5,4)
 persegiPanjang.luas
 persegiPanjang.keliling
+
+puts("")
+puts("")
+
+puts("=====Lingkaran=====")
+lingkaran = Lingkaran.new(7)
+lingkaran.luas
+lingkaran.keliling
