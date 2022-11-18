@@ -11,9 +11,17 @@ class Vehicle
 end
 
 
+module OldtimerCheck
+    def isOldTimer?(year)
+        (2022-year) > 30
+    end
+end
+
+
 class Car < Vehicle
     attr_accessor :model
     attr_accessor :brand
+    include OldtimerCheck
 
     def initialize(year,model,brand)
         super(year)
@@ -25,11 +33,11 @@ class Car < Vehicle
         puts "#{model}"
         puts "#{brand}"
         super
+        puts isOldTimer?(year)
     end
+
 end
 
 
-mobil = Car.new("2022","Model","Yamaha")
+mobil = Car.new(1990,"Model","Yamaha")
 mobil.printStats()
-
-
