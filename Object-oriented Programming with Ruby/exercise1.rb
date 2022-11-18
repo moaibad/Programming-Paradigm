@@ -10,7 +10,26 @@ class Vehicle
     end
 end
 
-mobil = Vehicle.new("2022")
+
+class Car < Vehicle
+    attr_accessor :model
+    attr_accessor :brand
+
+    def initialize(year,model,brand)
+        super(year)
+        @model = model
+        @brand = brand
+    end
+
+    def printStats()
+        puts "#{model}"
+        puts "#{brand}"
+        super
+    end
+end
+
+
+mobil = Car.new("2022","Model","Yamaha")
 mobil.printStats()
 
 
