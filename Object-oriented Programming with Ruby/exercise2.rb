@@ -52,7 +52,6 @@ persegiPanjang.luas
 persegiPanjang.keliling
 
 puts("")
-puts("")
 
 puts("=====Lingkaran=====")
 lingkaran = Lingkaran.new(7)
