@@ -21,6 +21,7 @@ end
 class Car < Vehicle
     attr_accessor :model
     attr_accessor :brand
+
     include OldtimerCheck
 
     def initialize(year,model,brand)
