@@ -1,12 +1,18 @@
 class Parkir
+
     attr_accessor :biaya_masuk
+
     def initialize(biaya_masuk)
         self.biaya_masuk = biaya_masuk
     end
+
 end
 
+
 class ParkirMotor < Parkir
+
     attr_accessor :nama
+
     def initialize(nama)
         super(100)
         self.nama = nama
@@ -15,11 +21,15 @@ class ParkirMotor < Parkir
     def totalBiaya()
         puts "Biaya Parkir Motor #{nama}: $#{biaya_masuk}"
     end
+
 end
 
+
 class ParkirMotorBiasa < ParkirMotor
+
     attr_accessor :lama
     attr_accessor :total_biaya
+
     def initialize(nama,lama)
         super(nama)
         self.lama = lama
@@ -29,11 +39,15 @@ class ParkirMotorBiasa < ParkirMotor
         total_biaya = (biaya_masuk)+((lama*60)*0.05)
         puts "Biaya Parkir Motor #{nama}: $#{total_biaya}"
     end
+
 end
 
+
 class ParkirMotorBesar < ParkirMotor
+
     attr_accessor :lama
     attr_accessor :total_biaya
+
     def initialize(nama,lama)
         super(nama)
         self.lama = lama
@@ -43,10 +57,14 @@ class ParkirMotorBesar < ParkirMotor
         total_biaya = (biaya_masuk)+((lama*60)*8)
         puts "Biaya Parkir Motor #{nama}: $#{total_biaya}"
     end
+
 end
 
+
 class ParkirMobil < Parkir
+
     attr_accessor :nama
+
     def initialize(nama)
         super(200)
         self.nama = nama
@@ -55,11 +73,15 @@ class ParkirMobil < Parkir
     def totalBiaya()
         puts "Biaya Parkir Mobil #{nama}: $#{biaya_masuk}"
     end
+
 end
 
+
 class ParkirMobilBiasa < ParkirMobil
+
     attr_accessor :lama
     attr_accessor :total_biaya
+
     def initialize(nama,lama)
         super(nama)
         self.lama = lama
@@ -69,11 +91,15 @@ class ParkirMobilBiasa < ParkirMobil
         total_biaya = (biaya_masuk)+((lama*60)*0.1)
         puts "Biaya Parkir Mobil #{nama}: $#{total_biaya}"
     end
+
 end
 
+
 class ParkirMobilSport < ParkirMobil
+
     attr_accessor :lama
     attr_accessor :total_biaya
+
     def initialize(nama,lama)
         super(nama)
         self.lama = lama
@@ -83,6 +109,7 @@ class ParkirMobilSport < ParkirMobil
         total_biaya = (biaya_masuk)+((lama*60)*10)
         puts "Biaya Parkir Mobil #{nama}: $#{total_biaya}"
     end
+
 end
 
 
