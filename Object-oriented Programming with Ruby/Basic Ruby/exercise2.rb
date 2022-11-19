@@ -1,4 +1,5 @@
 class BangunDatar
+
     def luas
         "Luas Bangun"
     end
@@ -6,9 +7,12 @@ class BangunDatar
     def keliling
         "Keliling Bangun"
     end
+
 end
 
+
 class PersegiPanjang < BangunDatar
+
     attr_accessor :panjang
     attr_accessor :lebar
 
@@ -18,17 +22,18 @@ class PersegiPanjang < BangunDatar
     end
 
     def luas
-        puts (panjang*lebar)
+        print("Luas     : ",(panjang*lebar),"\n")
     end
 
     def keliling 
-        puts (2*(panjang+lebar))
+        print("Keliling : ",(2*(panjang+lebar)),"\n")
     end
 
 end
 
 
 class Lingkaran < BangunDatar
+
     attr_accessor :r
 
     def initialize(r)
@@ -36,24 +41,24 @@ class Lingkaran < BangunDatar
     end
 
     def luas
-        puts (3.14*(r*r))
+        print("Luas     : ",(3.14*(r*r)),"\n")
     end
 
     def keliling 
-        puts (2*3.14*r)
+        print("Keliling : ",(2*3.14*r),"\n")
     end
 
 end
 
 
-puts("=====Persegi Panjang=====")
+puts("=========== Persegi Panjang ===========")
 persegiPanjang = PersegiPanjang.new(5,4)
 persegiPanjang.luas
 persegiPanjang.keliling
 
 puts("")
 
-puts("=====Lingkaran=====")
+puts("============== Lingkaran ==============")
 lingkaran = Lingkaran.new(7)
 lingkaran.luas
 lingkaran.keliling
